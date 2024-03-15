@@ -23,11 +23,63 @@ main{
 /* filter input */
 
 .filter-section{
-    padding: 2% 0;
     display: flex;
+    margin-bottom: 30px;
 }
 
-.filter-input{
+.generate-acc{
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.generate-acc input{
+  width: 200px;
+  padding: .7%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: #fad7a9 3px 3px 6px 0px inset, rgba(255, 153, 20, 0.5) -3px -3px 6px 1px inset;
+  padding: 15px 30px;
+  font-weight: 700;
+}
+
+.generate-acc button{
+  margin: 0 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #000 0%, #525252  51%, #000000  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.generate-acc button:hover{
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.generate-acc button:active {
+  transform: scale(0.95);
+}
+
+
+.generate-acc input:nth-child(2){
+  margin-left: 10px;
+}
+
+.filter-section input{
     width: 200px;
     padding: .7%;
     outline: none;
@@ -37,7 +89,9 @@ main{
     padding: 15px 30px;
     font-weight: 700;
 }
-
+.filter-section input:nth-child(2){
+  margin: 0 20px;
+}
 
 .btnFilter {
   margin: 0 10px;
@@ -83,7 +137,7 @@ table{
     background-color: rgba(69, 69, 69, 0.3);
    }
   .tbl-content{
-    height:400px;
+    height:300px;
     overflow-x:auto;
     margin-top: 0px;
     border: 1px solid rgba(66, 69, 69, 0.3);
