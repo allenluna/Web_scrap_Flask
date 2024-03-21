@@ -15,9 +15,19 @@ document.querySelector("#btnFilter").addEventListener("click", () => {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
+    }).then(res => res.json()).then(res => {
+
+        if (res.message === "Resumes Downloaded") {
+            localStorage.setItem("parsedData", JSON.stringify(res.data));
+            console.log(res.data);
+        }
+        
+        console.log(res.data)
     })
 
 });
+
+
 
 // remember function
 let remember_sign_in = () => {
